@@ -22,7 +22,5 @@
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/300985590/Desktop/bcprov-jdk16-1.45.jar"/>
-	<classpathentry kind="lib" path="C:/Users/300985590/Desktop/gson-2.3.1.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>Wallet Application</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <listener>
+    <listener-class>
+        com.wallet.servlets.IBMWalletInitHandler
+    </listener-class>
+  </listener>
+  <servlet>
+    <servlet-name>com.wallet.user.WelcomeServlet</servlet-name>
+    <servlet-class>com.wallet.user.WelcomeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>com.wallet.user.WelcomeServlet</servlet-name>
+    <url-pattern>/welcome</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>com.wallet.user.LogOutServlet</servlet-name>
+    <servlet-class>com.wallet.user.LogOutServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>com.wallet.user.LogOutServlet</servlet-name>
+    <url-pattern>/logout</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>com.wallet.servlets.WalletServlet</servlet-name>
+    <servlet-class>com.wallet.servlets.WalletServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>com.wallet.servlets.WalletServlet</servlet-name>
+    <url-pattern>/wallet</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <servlet-name>com.wallet.servlets.CreateWallet</servlet-name>
+    <servlet-class>com.wallet.servlets.CreateWallet</servlet-class> 
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>com.wallet.servlets.CreateWallet</servlet-name>
+    <url-pattern>/createWallet</url-pattern>
+  </servlet-mapping>
+   
+  <servlet>
+    <servlet-name>com.wallet.servlets.TransactionServlet</servlet-name>
+    <servlet-class>com.wallet.servlets.TransactionServlet</servlet-class> 
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>com.wallet.servlets.TransactionServlet</servlet-name>
+    <url-pattern>/transaction</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>com.wallet.servlets.SendMoneyServlet</servlet-name>
+    <servlet-class>com.wallet.servlets.SendMoneyServlet</servlet-class> 
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>com.wallet.servlets.SendMoneyServlet</servlet-name>
+    <url-pattern>/sendMoney</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>com.wallet.servlets.TransferMoneyServlet</servlet-name>
+    <servlet-class>com.wallet.servlets.TransferMoneyServlet</servlet-class> 
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>com.wallet.servlets.TransferMoneyServlet</servlet-name>
+    <url-pattern>/transfer</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+</web-app>
